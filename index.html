@@ -20,5 +20,21 @@
         <p>Phone: +91 12345 67890</p>
         <p>Email: info@raebarelinursery.com</p>
     </section>
+
+    <div class="image-slider">
+    <div class="slider-wrapper">
+        <img src="image1.jpg" alt="Plant 1">
+        <img src="image2.jpg" alt="Plant 2">
+        <img src="image3.jpg" alt="Plant 3">
+        <img src="image4.jpg" alt="Plant 4">
+        <img src="image5.jpg" alt="Plant 5">
+    </div>
+</div>
+
+    <script>
+    const slider = document.querySelector('.slider-wrapper');
+    slider.innerHTML += slider.innerHTML; // Duplicate images for smooth scrolling
+</script>
+    
 </body>
 </html>
