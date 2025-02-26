@@ -10,6 +10,37 @@ body {
     text-align: bottem; /* Aligns all text to the right */
 }
 
+
+.image-slider {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.slider-wrapper {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: slide 10s linear infinite;
+}
+
+.slider-wrapper img {
+    height: 100px;
+    width: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 /*
 header {
     background-color: #4CAF50;
