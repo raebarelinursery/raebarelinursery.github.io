@@ -7,9 +7,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: right; /* Aligns all text to the right */
+    text-align: center; /* Aligns all text to the right */
 }
 
+/*
 header {
     background-color: #4CAF50;
     color: white;
@@ -26,3 +27,4 @@ section {
 h1, h2 {
     color: #333;
 }
+*/
