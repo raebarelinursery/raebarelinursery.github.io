@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: bottem; /* Aligns all text to the right */
+    text-align: right; /* Aligns all text to the right */
 }
 
 
