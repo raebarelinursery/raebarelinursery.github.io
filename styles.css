@@ -8,21 +8,3 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-h1, h2 {
-    color: #333;
-}
