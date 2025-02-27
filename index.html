@@ -8,33 +8,31 @@
 </head>
 <body>
     <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Menu ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <h1>Welcome to ASMA ki Nursery</h1>
     </header>
+
     <section>
         <h2>About Us</h2>
         <p>At Raebareli Nursery, we offer a wide variety of plants and gardening services.</p>
     </section>
+
     <section>
         <h2>Contact Us</h2>
         <p>Address: 123 Green Lane, Raebareli, Uttar Pradesh, India</p>
         <p>Phone: +91 12345 67890</p>
         <p>Email: info@raebarelinursery.com</p>
     </section>
-
-    <div class="image-slider">
-    <div class="slider-wrapper">
-        <img src="image1.jpg" alt="Plant 1">
-        <img src="image2.jpg" alt="Plant 2">
-        <img src="image3.jpg" alt="Plant 3">
-        <img src="image4.jpg" alt="Plant 4">
-        <img src="image5.jpg" alt="Plant 5">
-    </div>
-</div>
-
-    <script>
-    const slider = document.querySelector('.slider-wrapper');
-    slider.innerHTML += slider.innerHTML; // Duplicate images for smooth scrolling
-</script>
-    
 </body>
 </html>
