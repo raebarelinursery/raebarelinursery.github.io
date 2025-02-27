@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raebareli Nursery</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> <!-- JavaScript for menu toggle -->
 </head>
 <body>
     <header>
         <nav>
-            <ul class="menu">
-                <li><a href="#">Menu ▼</a>
-                    <ul class="dropdown">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Our Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </li>
+            <div class="menu-container">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <div class="search-icon">🔍</div>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <h1>Welcome to ASMA ki Nursery</h1>
