@@ -89,3 +89,33 @@ button {
 button:hover {
     background-color: #1b4d3e;
 }
+
+/* Light Green Background for Gallery Page */
+.gallery-page {
+    background: none !important;
+    background-color: #d4edda !important;
+    padding: 20px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Gallery Images */
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
