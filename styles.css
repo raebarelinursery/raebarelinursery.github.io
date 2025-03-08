@@ -49,3 +49,39 @@ nav {
     background: none !important; /* Remove the global background image */
     background-color: #d4edda !important; /* Apply light green */
 }
+
+
+/* Navigation Menu - Dark Green Background */
+nav {
+    background-color: #2d6a4f !important; /* Dark Green */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+/* Menu Item Styling */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white !important; /* White text for contrast */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Add Space Below Menu So Content Starts Below It */
+body {
+    padding-top: 60px; /* Adjust based on menu height */
+}
