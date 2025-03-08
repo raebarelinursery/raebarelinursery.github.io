@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 60px; /* Space for fixed menu */
+    padding-top: 80px; /* Increased padding to move content down */
 }
 
 /* Navigation Menu */
@@ -16,10 +16,13 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0; /* Ensures menu starts at the left edge */
     z-index: 1000;
     padding: 15px 0;
+    box-sizing: border-box; /* Prevents extra spacing issues */
 }
 
+/* Menu Items - Remove Unwanted Margins */
 .menu {
     list-style: none;
     padding: 0;
@@ -30,13 +33,20 @@ nav {
 
 .menu li {
     padding: 10px 20px;
+    margin: 0; /* Remove extra spacing */
 }
 
+/* Menu Links */
 .menu li a {
     text-decoration: none;
-    color: white !important; /* White text for contrast */
+    color: white !important;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Shift Content Below Menu */
+section {
+    padding-top: 20px; /* Add spacing between menu and content */
 }
 
 /* Light Green Background for About & Contact Pages */
@@ -169,5 +179,9 @@ button:hover {
 
     .gallery img {
         height: 150px; /* Adjust height for mobile */
+    }
+
+    section {
+        padding-top: 30px; /* Extra space for mobile */
     }
 }
