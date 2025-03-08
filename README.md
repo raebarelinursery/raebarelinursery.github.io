@@ -8,6 +8,7 @@ At Raebareli Nursery, we offer a wide variety of plants and gardening services.
 
 ## Contact
 
-- **Address:** Raebareli, Uttar Pradesh, India
-- **Phone:** +91 1111111111
+- **Address:** 203/L, Dhunni Singh Nagar, Raebareli, Uttar Pradesh, India
+- **Phone:** +91 535 3563159
+- **Mobile:** +91 9532992190
 - **Email:** raebarelinursery@gmail.com
