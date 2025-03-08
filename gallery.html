@@ -22,14 +22,36 @@
         <h1>Our Plant Gallery</h1>
         <p>Explore our beautiful collection of plants available at Raebareli Nursery.</p>
 
-        <div class="gallery">
-            <a href="image1.jpg" target="_blank"><img src="images/plant1.jpg" alt="Plant 1"></a>
-            <a href="image2.jpg" target="_blank"><img src="images/plant2.jpg" alt="Plant 2"></a>
-            <a href="image3.jpg" target="_blank"><img src="images/plant3.jpg" alt="Plant 3"></a>
-            <a href="image4.jpg" target="_blank"><img src="images/plant4.jpg" alt="Plant 4"></a>
-            <a href="image5.jpg" target="_blank"><img src="images/plant5.jpg" alt="Plant 5"></a>
-            <a href="image6.jpg" target="_blank"><img src="images/plant6.jpg" alt="Plant 6"></a>
-        </div>
+     
+    <!-- Replace your existing gallery section with this -->
+<div class="gallery">
+    <img src="images/plant1.jpg" alt="Plant 1" onclick="openLightbox(this)">
+    <img src="images/plant2.jpg" alt="Plant 2" onclick="openLightbox(this)">
+    <img src="images/plant3.jpg" alt="Plant 3" onclick="openLightbox(this)">
+    <img src="images/plant4.jpg" alt="Plant 4" onclick="openLightbox(this)">
+    <img src="images/plant5.jpg" alt="Plant 5" onclick="openLightbox(this)">
+    <img src="images/plant6.jpg" alt="Plant 6" onclick="openLightbox(this)">
+</div>
+        
     </section>
+
+    <!-- Add this Lightbox div before </body> -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<!-- Add this JavaScript before </body> -->
+<script>
+    function openLightbox(img) {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+</script>
+    
 </body>
 </html>
