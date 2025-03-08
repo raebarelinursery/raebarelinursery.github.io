@@ -1,6 +1,6 @@
 /* Set Background Image */
 body {
-    background-image: url('background.gpeg.png'); /* Using the uploaded background */
+    background-image: url('background.gpeg'); /* Using the uploaded background */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
