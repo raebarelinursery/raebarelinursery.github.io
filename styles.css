@@ -56,11 +56,11 @@ section {
     padding: 20px;
 }
 
-/* Contact Form Styling */
+/* Contact Form Styling - Fixed Size Issue */
 form {
-    max-width: 500px;
+    max-width: 400px; /* Reduced width to fit within the background frame */
     margin: 20px auto;
-    padding: 20px;
+    padding: 15px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,29 +71,36 @@ form {
 /* Labels and Inputs */
 label {
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 10px;
     display: block;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 12px;
+    width: calc(100% - 20px); /* Ensures proper alignment within the form */
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    box-sizing: border-box; /* Prevents elements from overflowing */
+}
+
+/* Ensure Textarea Fits Properly */
+textarea {
+    resize: vertical; /* Allows resizing only in vertical direction */
+    min-height: 100px; /* Prevents excessive height */
 }
 
 /* Submit Button */
 button {
     background-color: #2d6a4f; /* Dark Green */
     color: white;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 15px;
+    font-size: 16px;
 }
 
 button:hover {
@@ -183,5 +190,13 @@ button:hover {
 
     section {
         padding-top: 30px; /* Extra space for mobile */
+    }
+
+    form {
+        max-width: 90%; /* Adjust form width for smaller screens */
+    }
+
+    input, textarea {
+        width: 100%; /* Ensures full-width alignment on mobile */
     }
 }
