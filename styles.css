@@ -48,3 +48,48 @@ nav {
     background: none !important; /* Remove the global background image */
     background-color: #d4edda !important; /* Apply light green */
 }
+
+/* Light Green Background for Contact Page */
+.about-page {
+    background: none !important;
+    background-color: #d4edda !important;
+    padding: 20px;
+}
+
+/* Contact Form Styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2d6a4f; /* Dark green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1b4d3e;
+}
