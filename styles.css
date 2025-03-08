@@ -1,10 +1,21 @@
+/* Set Background Image */
+body {
+    background-image: url('background.gpeg.png'); /* Using the uploaded background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* Navigation Menu */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    background-color: rgba(255, 255, 255, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
@@ -16,43 +27,20 @@ nav {
     align-items: center;
 }
 
-.menu-icon, .search-icon {
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.search-icon {
-    margin-left: 20px;
-}
-
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 .menu li {
-    text-align: center;
-    padding: 15px;
+    padding: 10px 20px;
 }
 
 .menu li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    display: block;
-}
-
-/* Show menu when active */
-.menu.show {
-    display: flex;
+    font-weight: bold;
 }
