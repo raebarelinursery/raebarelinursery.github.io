@@ -44,3 +44,8 @@ nav {
     font-size: 18px;
     font-weight: bold;
 }
+/* Light Green Background for About Page */
+.about-page {
+    background-color: #d4edda; /* Light green shade */
+    padding: 20px;
+}
