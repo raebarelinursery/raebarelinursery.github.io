@@ -22,7 +22,7 @@
         <h1>Contact Us</h1>
         <p>If you have any questions, feel free to reach out!</p>
 
-        <form action="mailto:raebarelinursery@gmail.com" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/raebarelinursery@gmail.com" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -31,6 +31,10 @@
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Prevent Spam Bots -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thankyou.html"> <!-- Redirect after submission -->
 
             <button type="submit">Send Message</button>
         </form>
