@@ -32,8 +32,8 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <!-- Prevent Spam Bots -->
-            <input type="hidden" name="_captcha" value="false">
+            <!-- Fix for FormSubmit Issues -->
+            <input type="hidden" name="_captcha" value="false"> <!-- Disable Captcha -->
             <input type="hidden" name="_next" value="thankyou.html"> <!-- Redirect after submission -->
 
             <button type="submit">Send Message</button>
