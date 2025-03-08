@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 80px; /* Increased padding to move content down */
+    padding-top: 100px; /* Increased padding to move content further down */
 }
 
 /* Navigation Menu */
@@ -46,7 +46,7 @@ nav {
 
 /* Shift Content Below Menu */
 section {
-    padding-top: 20px; /* Add spacing between menu and content */
+    padding-top: 40px; /* Extra space to ensure no overlap */
 }
 
 /* Light Green Background for About & Contact Pages */
