@@ -52,6 +52,9 @@
 
         <!-- Dynamic Plant Section (Initially Empty) -->
         <div id="plant-display" class="plant-container"></div>
+
+        <!-- Move to Top Button -->
+        <button id="topBtn" onclick="scrollToTop()">↑ Back to Categories</button>
     </section>
 
     <script>
@@ -100,16 +103,21 @@
             // Scroll to the displayed plant section
             document.getElementById("plant-display").scrollIntoView({ behavior: "smooth" });
         }
+
+        function scrollToTop() {
+            document.querySelector(".category-grid").scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Show or hide the "Move to Top" button
+        window.onscroll = function () {
+            let topButton = document.getElementById("topBtn");
+            if (document.documentElement.scrollTop > 300) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
     </script>
 
 </body>
 </html>
-<!-- Move to Top Button -->
-<button id="topBtn" onclick="scrollToTop()">↑ Back to Categories</button>
-
-<script>
-    function scrollToTop() {
-        document.querySelector(".category-grid").scrollIntoView({ behavior: "smooth" });
-    }
-</script>
-
