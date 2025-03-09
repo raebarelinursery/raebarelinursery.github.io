@@ -16,10 +16,10 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0; /* Ensures menu starts at the left edge */
+    left: 0;
     z-index: 1000;
     padding: 15px 0;
-    box-sizing: border-box; /* Prevents extra spacing issues */
+    box-sizing: border-box;
 }
 
 /* Menu Items */
@@ -45,7 +45,7 @@ nav {
 
 /* Shift Content Below Menu */
 section {
-    padding-top: 80px; /* Extra space to ensure no overlap */
+    padding-top: 80px;
 }
 
 /* Light Green Background for About & Contact Pages */
@@ -163,17 +163,10 @@ button:hover {
     border-radius: 8px;
 }
 
-/* Hidden Plant Sections */
-.plant-container {
-    display: none;
+/* Dynamic Plant Display */
+#plant-display {
     margin-top: 30px;
-}
-
-.plant-container h2 {
     text-align: center;
-    color: #2d6a4f;
-    font-size: 24px;
-    margin-bottom: 15px;
 }
 
 /* Plant Images Grid */
