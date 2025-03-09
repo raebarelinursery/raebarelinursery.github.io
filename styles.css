@@ -206,25 +206,27 @@ button:hover {
     }
 }
 
-
+/* Home Page Background Fix */
 .home-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
-    padding-top: 80px; /* Adjust for fixed navbar */
     box-sizing: border-box;
-    background-image: url('background.jpg'); /* Replace with your actual image file */
-    background-size: contain; /* Ensures the entire image fits */
+    padding: 0; /* Remove extra padding */
+    background-image: url('background.jpg'); /* Ensure the correct path */
+    background-size: cover; /* Ensure full-screen background */
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.home-page img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Ensures the full image is visible */
+/* Ensure Background is Fully Visible on Mobile */
+@media (max-width: 768px) {
+    .home-page {
+        height: 100vh; /* Maintain full height on mobile */
+        width: 100vw; /* Ensure it spans full width */
+        background-size: cover; /* Keep cover to ensure it fills screen */
+        background-position: center;
+    }
 }
