@@ -228,3 +228,38 @@ button:hover {
         background-position: center;
     }
 }
+/* Move to Top Button */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#topBtn:hover {
+    background-color: #1b4d3e;
+}
+
+/* Show Button When Scrolling */
+@media (max-width: 768px) {
+    #topBtn {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}
+
+window.onscroll = function () {
+    let topButton = document.getElementById("topBtn");
+    if (document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+};
