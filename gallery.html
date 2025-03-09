@@ -104,3 +104,12 @@
 
 </body>
 </html>
+<!-- Move to Top Button -->
+<button id="topBtn" onclick="scrollToTop()">↑ Back to Categories</button>
+
+<script>
+    function scrollToTop() {
+        document.querySelector(".category-grid").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
