@@ -254,7 +254,7 @@ button:hover {
         padding: 10px 14px;
     }
 }
-
+<!--
 window.onscroll = function () {
     let topButton = document.getElementById("topBtn");
     if (document.documentElement.scrollTop > 300) {
@@ -263,3 +263,20 @@ window.onscroll = function () {
         topButton.style.display = "none";
     }
 };
+
+-->
+<script>
+    function scrollToTop() {
+        document.querySelector("h1").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Show or hide the "Move to Top" button
+    window.onscroll = function () {
+        let topButton = document.getElementById("topBtn");
+        if (document.documentElement.scrollTop > 300) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    };
+</script>
