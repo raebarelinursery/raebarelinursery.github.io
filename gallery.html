@@ -19,7 +19,7 @@
     </header>
 
     <section>
-        <h1>Our Plant Categories</h1>
+        <h1 id="category-title">Our Plant Categories</h1>
         <p>Click on a category to view its plants.</p>
 
         <div class="category-grid">
@@ -105,7 +105,7 @@
         }
 
         function scrollToTop() {
-            document.querySelector(".category-grid").scrollIntoView({ behavior: "smooth" });
+            document.getElementById("category-title").scrollIntoView({ behavior: "smooth" });
         }
 
         // Show or hide the "Move to Top" button
