@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 100px; /* Increased padding to move content further down */
+    padding-top: 200px; /* Increased padding to move content further down */
 }
 
 /* Navigation Menu */
@@ -226,7 +226,7 @@ button:hover {
     .home-page {
         height: 100vh; /* Maintain full height on mobile */
         width: 100vw; /* Ensure it spans full width */
-        background-size: cover; /* Keep cover to ensure it fills screen */
+        background-size: 100%; /* Keep cover to ensure it fills screen */
         background-position: center;
     }
 }
