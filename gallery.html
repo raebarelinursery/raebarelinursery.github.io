@@ -19,39 +19,36 @@
     </header>
 
     <section>
-        <h1>Our Plant Gallery</h1>
-        <p>Explore our beautiful collection of plants available at Raebareli Nursery.</p>
+        <h1>Our Plant Categories</h1>
+        <p>Explore a variety of plants and gardening essentials at Raebareli Nursery.</p>
 
-     
-    <!-- Replace your existing gallery section with this -->
-<div class="gallery">
-    <img src="images/image1.jpg" alt="Plant 1" onclick="openLightbox(this)">
-    <img src="images/image2.jpg" alt="Plant 2" onclick="openLightbox(this)">
-    <img src="images/image3.jpg" alt="Plant 3" onclick="openLightbox(this)">
-    <img src="images/image4.jpg" alt="Plant 4" onclick="openLightbox(this)">
-    <img src="images/image5.jpg" alt="Plant 5" onclick="openLightbox(this)">
-    <img src="images/image6.jpg" alt="Plant 6" onclick="openLightbox(this)">
-</div>
-        
+        <div class="category-grid">
+            <div class="category">
+                <img src="images/image1.jpg" alt="Flowering Plants">
+                <h3>Flowering Plants</h3>
+                <p>Roses, Marigolds, Hibiscus</p>
+            </div>
+            <div class="category">
+                <img src="images/image2.jpg" alt="Indoor Plants">
+                <h3>Indoor Plants</h3>
+                <p>Snake Plant, Money Plant, Peace Lily</p>
+            </div>
+            <div class="category">
+                <img src="images/image3.jpg" alt="Outdoor Plants">
+                <h3>Outdoor Plants</h3>
+                <p>Mango, Guava, Neem</p>
+            </div>
+            <div class="category">
+                <img src="images/image4.jpg" alt="Succulents & Bonsai">
+                <h3>Succulents & Bonsai</h3>
+                <p>Small & Elegant Greens</p>
+            </div>
+            <div class="category">
+                <img src="images/image5.jpg" alt="Gardening Supplies">
+                <h3>Gardening Supplies</h3>
+                <p>Soil, Pots, Fertilizers</p>
+            </div>
+        </div>
     </section>
-
-    <!-- Add this Lightbox div before </body> -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img id="lightbox-img">
-</div>
-
-<!-- Add this JavaScript before </body> -->
-<script>
-    function openLightbox(img) {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-</script>
-    
 </body>
 </html>
