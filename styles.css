@@ -206,15 +206,19 @@ button:hover {
     }
 }
 
+
 .home-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen height */
-    width: 100vw; /* Full screen width */
-    overflow: hidden; /* Prevents unwanted scrolling */
-    padding-top: 80px; /* Adjust based on your navigation height */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    padding-top: 80px; /* Adjust for fixed navbar */
     box-sizing: border-box;
+    background-image: url('background.jpg'); /* Replace with your actual image file */
+    background-size: contain; /* Ensures the entire image fits */
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .home-page img {
