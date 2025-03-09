@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     background-image: url('background.jpg'); /* Using uploaded background */
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
