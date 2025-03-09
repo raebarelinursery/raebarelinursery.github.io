@@ -20,35 +20,89 @@
 
     <section>
         <h1>Our Plant Categories</h1>
-        <p>Explore a variety of plants and gardening essentials at Raebareli Nursery.</p>
+        <p>Click on a category to view all plants.</p>
 
         <div class="category-grid">
-            <div class="category">
-                <img src="images/image1.jpg" alt="Flowering Plants">
+            <div class="category" onclick="togglePlants('flowering-plants')">
+                <img src="images/flowering.jpg" alt="Flowering Plants">
                 <h3>Flowering Plants</h3>
                 <p>Roses, Marigolds, Hibiscus</p>
             </div>
-            <div class="category">
-                <img src="images/image2.jpg" alt="Indoor Plants">
+            <div class="category" onclick="togglePlants('indoor-plants')">
+                <img src="images/indoor.jpg" alt="Indoor Plants">
                 <h3>Indoor Plants</h3>
                 <p>Snake Plant, Money Plant, Peace Lily</p>
             </div>
-            <div class="category">
-                <img src="images/image3.jpg" alt="Outdoor Plants">
+            <div class="category" onclick="togglePlants('outdoor-plants')">
+                <img src="images/outdoor.jpg" alt="Outdoor Plants">
                 <h3>Outdoor Plants</h3>
                 <p>Mango, Guava, Neem</p>
             </div>
-            <div class="category">
-                <img src="images/image4.jpg" alt="Succulents & Bonsai">
+            <div class="category" onclick="togglePlants('succulents')">
+                <img src="images/succulent.jpg" alt="Succulents & Bonsai">
                 <h3>Succulents & Bonsai</h3>
                 <p>Small & Elegant Greens</p>
             </div>
-            <div class="category">
-                <img src="images/image5.jpg" alt="Gardening Supplies">
+            <div class="category" onclick="togglePlants('gardening-supplies')">
+                <img src="images/gardening.jpg" alt="Gardening Supplies">
                 <h3>Gardening Supplies</h3>
                 <p>Soil, Pots, Fertilizers</p>
             </div>
         </div>
+
+        <!-- Plant Images Section (Initially Hidden) -->
+        <div id="flowering-plants" class="plant-container">
+            <h2>Flowering Plants</h2>
+            <div class="plant-grid">
+                <img src="images/rose.jpg" alt="Rose">
+                <img src="images/marigold.jpg" alt="Marigold">
+                <img src="images/hibiscus.jpg" alt="Hibiscus">
+            </div>
+        </div>
+
+        <div id="indoor-plants" class="plant-container">
+            <h2>Indoor Plants</h2>
+            <div class="plant-grid">
+                <img src="images/snakeplant.jpg" alt="Snake Plant">
+                <img src="images/moneyplant.jpg" alt="Money Plant">
+                <img src="images/peacelily.jpg" alt="Peace Lily">
+            </div>
+        </div>
+
+        <div id="outdoor-plants" class="plant-container">
+            <h2>Outdoor Plants</h2>
+            <div class="plant-grid">
+                <img src="images/mango.jpg" alt="Mango">
+                <img src="images/guava.jpg" alt="Guava">
+                <img src="images/neem.jpg" alt="Neem">
+            </div>
+        </div>
+
+        <div id="succulents" class="plant-container">
+            <h2>Succulents & Bonsai</h2>
+            <div class="plant-grid">
+                <img src="images/succulent1.jpg" alt="Succulent">
+                <img src="images/succulent2.jpg" alt="Succulent">
+                <img src="images/bonsai.jpg" alt="Bonsai">
+            </div>
+        </div>
+
+        <div id="gardening-supplies" class="plant-container">
+            <h2>Gardening Supplies</h2>
+            <div class="plant-grid">
+                <img src="images/soil.jpg" alt="Soil">
+                <img src="images/pots.jpg" alt="Pots">
+                <img src="images/fertilizer.jpg" alt="Fertilizer">
+            </div>
+        </div>
     </section>
+
+    <script>
+        function togglePlants(categoryId) {
+            let container = document.getElementById(categoryId);
+            container.style.display = container.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
 </body>
 </html>
