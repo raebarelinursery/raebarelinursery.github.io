@@ -188,8 +188,13 @@ button:hover {
         height: 150px; /* Adjust height for mobile */
     }
 
+    /* Fix Content Overlapping on Mobile */
+    body {
+        padding-top: 130px !important; /* Increase top padding for mobile */
+    }
+
     section {
-        padding-top: 30px; /* Extra space for mobile */
+        padding-top: 40px !important; /* Ensure content starts below menu */
     }
 
     form {
