@@ -34,12 +34,22 @@
         const imageCount = 84;  // Number of images
         const imageGallery = document.getElementById("image-gallery");
 
+
         for (let i = 1; i <= imageCount; i++) {
-            let img = document.createElement("img");
-            img.src = `images/image${i}.jpeg`;  // Change path if needed
-            img.alt = `Plant Image ${i}`;
-            imageGallery.appendChild(img);
-        }
+    let img = document.createElement("img");
+    
+    // Try loading .jpg first, fallback to .jpeg
+    img.src = `images/image${i}.jpg`;
+    img.alt = `Plant Image ${i}`;
+
+    // If .jpg fails to load, switch to .jpeg
+    img.onerror = function () {
+        img.src = `images/image${i}.jpeg`;
+    };
+
+    imageGallery.appendChild(img);
+}
+
 
         // Scroll to Top Function
         function scrollToTop() {
