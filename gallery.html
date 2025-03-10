@@ -20,14 +20,14 @@
 
     <section>
         <h1>Our Plant Gallery</h1>
-        <p>Browse through our beautiful collection of plants.</p>
+        <p>Click on an image to view it in full size.</p>
 
-        <!-- Image Gallery Container -->
+        <!-- Image Gallery -->
         <div class="gallery" id="image-gallery"></div>
 
-        <!-- Lightbox for Enlarged Images -->
-        <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
+        <!-- Lightbox for Enlarged Image -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
             <img id="lightbox-img" src="" alt="Enlarged Image">
         </div>
 
@@ -36,34 +36,31 @@
     </section>
 
     <script>
+        // List of Image Filenames (Modify this if needed)
         const imageCount = 100;  // Number of images
         const imageGallery = document.getElementById("image-gallery");
 
         for (let i = 1; i <= imageCount; i++) {
             let img = document.createElement("img");
-            img.src = `images/image${i}.JPG`;
+            img.src = `images/image${i}.jpg`;  // Default to .jpg
             img.alt = `Plant Image ${i}`;
+            img.onclick = function () { openLightbox(this.src); };
 
-            // If .JPG fails, fallback to .jpeg
+            // If .jpg fails, try .jpeg
             img.onerror = function () {
-                img.src = `images/image${i}.jpeg`;
-            };
-
-            // Click event to enlarge image
-            img.onclick = function () {
-                openLightbox(img.src);
+                this.src = `images/image${i}.jpeg`;
             };
 
             imageGallery.appendChild(img);
         }
 
-        // Open Lightbox Function
+        // Open Lightbox
         function openLightbox(src) {
-            document.getElementById("lightbox").style.display = "flex";
             document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
         }
 
-        // Close Lightbox Function
+        // Close Lightbox
         function closeLightbox() {
             document.getElementById("lightbox").style.display = "none";
         }
