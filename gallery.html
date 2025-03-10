@@ -19,138 +19,34 @@
     </header>
 
     <section>
-        <h1 id="category-title">Our Plant Categories</h1>
-        <p>Click on a category to view its plants.</p>
+        <h1>Our Plant Gallery</h1>
+        <p>Browse through our beautiful collection of plants.</p>
 
-        <div class="category-grid">
-            <div class="category" onclick="showPlants('flowering-plants')">
-                <img src="images/Flowering/image6.jpeg" alt="Flowering Plants">
-                <h3>Flowering Plants</h3>
-                <p>Roses, Marigolds, Hibiscus</p>
-            </div>
-            <div class="category" onclick="showPlants('indoor-plants')">
-                <img src="images/indoor/image5.jpeg" alt="Indoor Plants">
-                <h3>Indoor Plants</h3>
-                <p>Snake Plant, Money Plant, Peace Lily</p>
-            </div>
-            <div class="category" onclick="showPlants('outdoor-plants')">
-                <img src="images/outdoor/image5.jpeg" alt="Outdoor Plants">
-                <h3>Outdoor Plants</h3>
-                <p>Mango, Guava, Neem</p>
-            </div>
-            <div class="category" onclick="showPlants('succulents')">
-                <img src="images/Succulent/image6.jpeg" alt="Succulents & Bonsai">
-                <h3>Succulents & Bonsai</h3>
-                <p>Small & Elegant Greens</p>
-            </div>
-            <div class="category" onclick="showPlants('gardening-supplies')">
-                <img src="images/gardening/image1.jpeg" alt="Gardening Supplies">
-                <h3>Gardening Supplies</h3>
-                <p>Soil, Pots, Fertilizers</p>
-            </div>
-        </div>
-
-        <!-- Dynamic Plant Section (Initially Empty) -->
-        <div id="plant-display" class="plant-container"></div>
+        <!-- Image Gallery Container -->
+        <div class="gallery" id="image-gallery"></div>
 
         <!-- Move to Top Button -->
-        <button id="topBtn" onclick="scrollToTop()">↑ Back to Categories</button>
+        <button id="topBtn" onclick="scrollToTop()">↑ Back to Top</button>
     </section>
 
     <script>
-        function showPlants(category) {
-            const plantData = {
-                "flowering-plants": `
-                    <h2>Flowering Plants</h2>
-                    <div class="plant-grid">
-                        <img src="images/Flowering/image1.jpeg" alt="">
-                       <!-- <img src="images/Flowering/image2.jpeg" alt="">-->
-                        <img src="images/Flowering/image3.jpeg" alt="">
-                        <img src="images/Flowering/image4.jpeg" alt="">
-                        <img src="images/Flowering/image5.jpeg" alt="">
-                        <img src="images/Flowering/image6.jpeg" alt="">
-                        <img src="images/Flowering/image7.jpeg" alt="">
-                        <img src="images/Flowering/image8.jpeg" alt="">
-                        <img src="images/Flowering/image9.jpeg" alt="">
-                        <img src="images/Flowering/image10.jpeg" alt="">
-            
-                        <img src="images/Flowering/image12.jpeg" alt="">
-                        <img src="images/Flowering/image13.jpeg" alt="">
-                        <img src="images/Flowering/image14.jpeg" alt="">
-                        <img src="images/Flowering/image15.jpeg" alt="">
-                        <img src="images/Flowering/image16.jpeg" alt="">
-                        <img src="images/Flowering/image17.jpeg" alt="">
-                        <img src="images/Flowering/image18.jpeg" alt="">
-                    </div>`,
-                "indoor-plants": `
-                    <h2>Indoor Plants</h2>
-                    <div class="plant-grid">
-                        <img src="images/indoor/image1.jpeg" alt="">
-                        <img src="images/indoor/image2.jpeg" alt="">
-                        <img src="images/indoor/image3.jpeg" alt="">
-                        <img src="images/indoor/image4.jpeg" alt="">
-                        <img src="images/indoor/image5.jpeg" alt="">
-                        <img src="images/indoor/image8.jpeg" alt="">
-                        <img src="images/indoor/image9.jpeg" alt="">
-                        <img src="images/indoor/image10.jpeg" alt="">
-                        <img src="images/indoor/image11.jpeg" alt="">
-                        <img src="images/indoor/image12.jpeg" alt="">
-                        <img src="images/indoor/image13.jpeg" alt="">
-                        <img src="images/indoor/image14.jpeg" alt="">
-                        <img src="images/indoor/image15.jpeg" alt="">
-                    </div>`,
-                "outdoor-plants": `
-                    <h2>Outdoor Plants</h2>
-                    <div class="plant-grid">
-                        <img src="images/outdoor/image1.jpeg" alt="">
-                        <img src="images/outdoor/image2.jpeg" alt="">
-                        <img src="images/outdoor/image3.jpeg" alt="">
-                        <img src="images/outdoor/image4.jpeg" alt="">
-                        <img src="images/outdoor/image5.jpeg" alt="">
-                        <img src="images/outdoor/image6.jpeg" alt="">
-                        <img src="images/outdoor/image7.jpeg" alt="">
-                        <img src="images/outdoor/image8.jpeg" alt="">
-                        <img src="images/outdoor/image9.jpeg" alt="">
-                    </div>`,
-                "succulents": `
-                    <h2>Succulents & Bonsai</h2>
-                    <div class="plant-grid">
-                        <img src="images/Succulent/image1.jpeg" alt="">
-                        <img src="images/Succulent/image2.jpeg" alt="">
-                        <img src="images/Succulent/image3.jpeg" alt="">
-                        <img src="images/Succulent/image4.jpeg" alt="">
-                        <img src="images/Succulent/image5.jpeg" alt="">
-                        <img src="images/Succulent/image6.jpeg" alt="">
-                        <img src="images/Succulent/image7.jpeg" alt="">
-                        <img src="images/Succulent/image8.jpeg" alt="">
-                        <img src="images/Succulent/image8.jpeg" alt="">
-                        <img src="images/Succulent/image10.jpeg" alt="">
-                        <img src="images/Succulent/image11.jpeg" alt="">
-                        <img src="images/Succulent/image12.jpeg" alt="">
-                        <img src="images/Succulent/image13.jpeg" alt="">
-                        <img src="images/Succulent/image14.jpeg" alt="">
-                    </div>`,
-                "gardening-supplies": `
-                    <h2>Gardening Supplies</h2>
-                    <div class="plant-grid">
-                        <img src="images/gardening/image1.jpeg" alt="">
-                        <img src="images/gardening/image2.jpeg" alt="">
-                        <img src="images/gardening/image3.jpeg" alt="">
-                    </div>`
-            };
+        // List of Image Filenames (Modify this if needed)
+        const imageCount = 100;  // Number of images
+        const imageGallery = document.getElementById("image-gallery");
 
-            // Replace existing content
-            document.getElementById("plant-display").innerHTML = plantData[category];
-
-            // Scroll to the displayed plant section
-            document.getElementById("plant-display").scrollIntoView({ behavior: "smooth" });
+        for (let i = 1; i <= imageCount; i++) {
+            let img = document.createElement("img");
+            img.src = `images/image${i}.jpeg`;  // Change path if needed
+            img.alt = `Plant Image ${i}`;
+            imageGallery.appendChild(img);
         }
 
+        // Scroll to Top Function
         function scrollToTop() {
-            document.getElementById("category-title").scrollIntoView({ behavior: "smooth" });
+            document.querySelector("h1").scrollIntoView({ behavior: "smooth" });
         }
 
-        // Show or hide the "Move to Top" button
+        // Show "Move to Top" button on scroll
         window.onscroll = function () {
             let topButton = document.getElementById("topBtn");
             if (document.documentElement.scrollTop > 300) {
