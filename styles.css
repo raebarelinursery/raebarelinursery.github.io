@@ -114,19 +114,20 @@ button:hover {
     padding: 20px;
 }
 
-/* Gallery Grid */
+/* Gallery Grid - Auto-Adjust for Large Number of Images */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     max-width: 90%;
     margin: auto;
-    justify-content: center;
+    padding: 10px;
 }
 
+/* Gallery Images - Standard Size */
 .gallery img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -134,59 +135,9 @@ button:hover {
     transition: transform 0.3s;
 }
 
+/* Image Hover Effect */
 .gallery img:hover {
     transform: scale(1.05);
-}
-
-/* Featured Categories Grid */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-}
-
-.category {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.category:hover {
-    transform: scale(1.05);
-}
-
-.category img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Dynamic Plant Display */
-#plant-display {
-    margin-top: 30px;
-    text-align: center;
-}
-
-/* Plant Images Grid */
-.plant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-}
-
-.plant-grid img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 /* Move to Top Button */
