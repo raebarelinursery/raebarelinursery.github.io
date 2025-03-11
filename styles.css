@@ -1,5 +1,5 @@
 /* Global Styles */
-body {
+html, body {
     background-image: url('background.jpg'); /* Using uploaded background */
     background-size: cover;
     background-position: center;
@@ -11,6 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
 }
 
 /* Navigation Menu */
@@ -32,6 +34,7 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Prevents overflow */
 }
 
 .menu li {
@@ -50,6 +53,9 @@ nav {
 section {
     padding-top: 80px;
     flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Ensures no overflow */
 }
 
 /* Page Backgrounds */
@@ -120,6 +126,7 @@ button:hover {
     max-width: 90%;
     margin: auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Gallery Images */
@@ -199,6 +206,15 @@ button:hover {
     #topBtn {
         font-size: 14px;
         padding: 10px 14px;
+    }
+
+    .menu {
+        flex-direction: column; /* Ensures menu items wrap properly */
+        text-align: center;
+    }
+
+    .menu li {
+        padding: 10px;
     }
 }
 
