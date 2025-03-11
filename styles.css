@@ -229,3 +229,38 @@ button:hover {
         background-position: center;
     }
 }
+
+/* Footer Styling */
+footer {
+    background-color: #2d6a4f; /* Dark Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.footer-info p, .footer-links {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
