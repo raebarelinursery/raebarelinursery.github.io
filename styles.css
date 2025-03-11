@@ -11,16 +11,8 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100%;
-    overflow-x: hidden; /* Remove horizontal scrollbar */
-    box-sizing: border-box;
-}
-
-/* Apply box-sizing globally */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 /* Navigation Menu */
@@ -38,14 +30,16 @@ nav {
 /* Menu Items */
 .menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Prevents menu from overflowing */
-    width: 100%;
+    flex-wrap: wrap; /* Prevents overflow */
 }
 
 .menu li {
     padding: 10px 20px;
+    margin: 0;
 }
 
 .menu li a {
@@ -60,7 +54,8 @@ section {
     padding-top: 80px;
     flex: 1;
     width: 100%;
-    overflow-x: hidden; /* Ensures no horizontal scroll */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Ensures no overflow */
 }
 
 /* Page Backgrounds */
@@ -82,7 +77,6 @@ form {
     flex-direction: column;
 }
 
-/* Input Fields */
 label {
     font-weight: bold;
     margin-top: 10px;
@@ -90,11 +84,16 @@ label {
 }
 
 input, textarea {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="tel"] {
     font-size: 14px;
 }
 
@@ -113,7 +112,6 @@ button {
     cursor: pointer;
     margin-top: 15px;
     font-size: 16px;
-    width: 100%;
 }
 
 button:hover {
@@ -125,9 +123,10 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Larger for desktop */
     gap: 10px;
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Gallery Images */
@@ -139,6 +138,10 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
 /* Lightbox Effect */
@@ -155,7 +158,6 @@ button:hover {
     z-index: 2000;
 }
 
-/* Lightbox Image */
 .lightbox img {
     max-width: 90%;
     max-height: 80%;
@@ -207,7 +209,7 @@ button:hover {
     }
 
     .menu {
-        flex-direction: column;
+        flex-direction: column; /* Ensures menu items wrap properly */
         text-align: center;
     }
 
@@ -230,7 +232,6 @@ button:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow-x: hidden;
 }
 
 /* Ensure Background is Fully Visible on Mobile */
