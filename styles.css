@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     background-image: url('background.jpg'); /* Using uploaded background */
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
@@ -48,10 +48,10 @@ section {
     padding-top: 80px;
 }
 
-/* Light Green Background for About & Contact Pages */
-.about-page, .contact-page {
+/* Page Backgrounds */
+.about-page, .contact-page, .gallery-page {
     background: none !important;
-    background-color: #d4edda !important;
+    background-color: #d4edda !important; /* Light Green */
     padding: 20px;
 }
 
@@ -92,6 +92,7 @@ textarea {
     min-height: 100px;
 }
 
+/* Buttons */
 button {
     background-color: #2d6a4f;
     color: white;
@@ -107,27 +108,20 @@ button:hover {
     background-color: #1b4d3e;
 }
 
-/* Light Green Background for Gallery Page */
-.gallery-page {
-    background: none !important;
-    background-color: #d4edda !important;
-    padding: 20px;
-}
-
-/* Gallery Grid - Auto-Adjust for Large Number of Images */
+/* Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increased size for desktop */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Larger for desktop */
     gap: 10px;
     max-width: 90%;
     margin: auto;
     padding: 10px;
 }
 
-/* Gallery Images - Bigger for Desktop */
+/* Gallery Images */
 .gallery img {
     width: 100%;
-    height: 250px; /* Larger images */
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -135,7 +129,6 @@ button:hover {
     transition: transform 0.3s;
 }
 
-/* Image Hover Effect */
 .gallery img:hover {
     transform: scale(1.05);
 }
