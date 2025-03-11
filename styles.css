@@ -8,6 +8,9 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 200px; /* Increased padding to move content further down */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Menu */
@@ -46,6 +49,7 @@ nav {
 /* Shift Content Below Menu */
 section {
     padding-top: 80px;
+    flex: 1;
 }
 
 /* Page Backgrounds */
@@ -201,10 +205,11 @@ button:hover {
 /* Home Page Background Fix */
 .home-page {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     box-sizing: border-box;
     padding: 0;
     background-image: url('background.jpg');
@@ -217,24 +222,30 @@ button:hover {
 @media (max-width: 768px) {
     .home-page {
         height: 100vh;
-        width: 100vw;
-        background-size: 100%;
+        width: 100%;
+        background-size: cover;
         background-position: center;
     }
 }
 
-/* Footer Styling */
+/* Footer Styling - Fixed to Bottom */
 footer {
     background-color: #2d6a4f; /* Dark Green */
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
 }
 
+/* Footer Content */
 .footer-container {
-    max-width: 90%;
-    margin: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-info p, .footer-links {
@@ -256,4 +267,11 @@ footer {
     font-size: 14px;
     margin-top: 10px;
     opacity: 0.8;
+}
+
+/* Fix Footer on Small Screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
 }
